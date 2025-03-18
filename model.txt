@@ -1,0 +1,100 @@
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true, minlength: 8 },
+  mobile: { type: String, required: true },
+  tripsDetails: { type: String },
+  profilePicture: { type: String },
+  preferences: { type: String },
+  saved: { type: mongoose.Schema.Types.ObjectId, ref: "SavedData" },
+});
+
+const hotelSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  address: { type: String, required: true },
+  landmark: { type: [String] },
+  city: { type: String, required: true },
+  state: { type: String, required: true },
+  country: { type: String, required: true },
+  pincode: { type: String, required: true },
+  freeCancellation: { type: Boolean, default: false },
+  facilities: { type: [String] },
+  ratings: { type: Number, min: 0, max: 5 },
+  photos: { type: String },
+  rooms: { type: mongoose.Schema.Types.ObjectId, ref: "Room" },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
+});
+
+const roomSchema = new mongoose.Schema({
+  available: { type: Boolean, default: true },
+  pricePerNight: { type: Number, required: true, min: 0 },
+  roomType: { type: String, required: true },
+  photos: { type: String },
+  bed: { type: [String] },
+  ac: { type: Boolean },
+  adults: { type: Number, min: 1 },
+  child: { type: Number, min: 0 },
+});
+
+const flightSchema = new mongoose.Schema({
+  flightid: { type: String, required: true },
+  origin: { type: String, required: true },
+  airline: { type: String, required: true },
+  avability: { type: Date },
+  destination: { type: String, required: true },
+  arrival: { type: Date },
+  departure: { type: Date },
+  class: { type: [String] },
+  price: { type: Number, required: true, min: 0 },
+  connectingSite: { type: String },
+  preferences: { type: String },
+});
+
+const busSchema = new mongoose.Schema({
+  numberPlate: { type: String, required: true },
+  busType: { type: String },
+  origin: { type: String, required: true },
+  seatsAvailable: { type: Number, min: 0 },
+  destination: { type: String, required: true },
+  price: { type: Number, required: true, min: 0 },
+  arrival: { type: String },
+  departure: { type: String },
+  avability: { type: Boolean, default: true },
+  driver: { type: String },
+  driverDetails: { type: [String] },
+});
+
+const superAdminSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true, minlength: 8 },
+  manage: { type: mongoose.Schema.Types.ObjectId, ref: "Admin" },
+});
+
+const adminSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  pancard: { type: String },
+  phoneNumber: { type: Number, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  varification: { type: [String] },
+  enterpriseName: { type: String },
+  address: { type: String },
+  pincode: { type: Number, required: true },
+  country: { type: String, required: true },
+  domain: { type: String, required: true },
+  document: { type: String },
+});
+
+module.exports = {
+  User: mongoose.model("User", userSchema),
+  Hotel: mongoose.model("Hotel", hotelSchema),
+  Room: mongoose.model("Room", roomSchema),
+  Flight: mongoose.model("Flight", flightSchema),
+  Bus: mongoose.model("Bus", busSchema),
+  SuperAdmin: mongoose.model("SuperAdmin", superAdminSchema),
+  Admin: mongoose.model("Admin", adminSchema),
+};
