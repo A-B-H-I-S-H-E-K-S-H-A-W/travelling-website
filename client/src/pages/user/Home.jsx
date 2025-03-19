@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Navbar from "../../components/user/Navbar";
 import { AnimatedImages } from "../../components/user/AnimatedImages";
 import { ButtonSolid } from "../../components/common/Button";
-import { Apple, Instagram } from "lucide-react";
-import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { serviceButtons } from "../../data";
 // import Loading from "../../components/common/Loading";
 
 const Home = () => {
@@ -45,16 +44,38 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="h-10 p-1 w-full flex items-center md:space-x-4 space-x-2 bg-white mt-4 rounded-2xl">
+                  <div className="h-12 p-1 w-full flex items-center md:space-x-4 space-x-2 bg-white mt-4 rounded-2xl">
                     <input
                       type="text"
-                      className="h-8 w-[80%] rounded-2xl px-2 ring ring-sky-500  text-gray-700"
+                      className="h-10 w-[80%] rounded-2xl px-2 ring ring-sky-500  text-gray-700"
                       placeholder="Destination ?"
                     />
                     <ButtonSolid
                       title={"Serach"}
-                      className={"px-8 py-1 md:py-1 rounded-2xl"}
+                      className={"px-9 py-2 md:py-2 rounded-2xl"}
                     />
+                  </div>
+
+                  <div className="mt-5 h-20">
+                    <div className="grid grid-cols-3 w-full gap-3 md:gap-5 rounded-2xl">
+                      {serviceButtons.map((item) => (
+                        <>
+                          <div
+                            key={item.id}
+                            className={`md:h-24 h-16 w-full hover:scale-110 duration-300 cursor-pointer ${item.className}`}
+                          >
+                            <img
+                              className={item.imageClassName}
+                              src={item.src}
+                              alt={item.alt}
+                            />
+                            <p className="font-semibold text-center mt-1 text-sm md:text-lg italic">
+                              {item.title}
+                            </p>
+                          </div>
+                        </>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -62,14 +83,7 @@ const Home = () => {
             <div className="mt-20 md:mt-10 md:px-10">
               <AnimatedImages />
               <div className="flex items-end justify-end w-full h-44">
-                <div className="space-x-2">
-                  <div>
-                    <Instagram />
-                  </div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
+                <div className="space-x-2"></div>
               </div>
             </div>
           </div>
