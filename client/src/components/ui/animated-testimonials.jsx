@@ -31,7 +31,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
     <div className="mx-auto max-w-sm md:max-w-5xl">
       <div className="relative">
         <div>
-          <div className="relative h-[25rem] md:w-full w-[85%]">
+          <div className="relative h-[30rem] md:w-full w-[85%]">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
