@@ -32,8 +32,6 @@ const Loading = () => {
           <motion.img
             initial={{
               translateX: -800,
-              width: "300px",
-              height: "300px",
               rotate: 45,
             }}
             animate={{
@@ -44,7 +42,7 @@ const Loading = () => {
             }}
             transition={{ duration: 3.4, ease: easeInOut }}
             src={loader}
-            className="size-80"
+            className="size-20 md:size-80"
             alt="img"
           />
         </motion.div>

@@ -4,6 +4,7 @@ import { AnimatedImages } from "../../components/user/AnimatedImages";
 import { ButtonOutline, ButtonSolid } from "../../components/common/Button";
 import { serviceButtons } from "../../data";
 import Loading from "../../components/common/Loading";
+// import { CarouselCard } from "../../components/user/CarouselCard";
 // import Loading from "../../components/common/Loading";
 
 const Home = () => {
@@ -115,6 +116,9 @@ const Home = () => {
                     See more
                   </ButtonOutline>
                 </div>
+              </div>
+              <div>
+                {/* <CarouselCard /> */}
               </div>
             </div>
           </div>
