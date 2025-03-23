@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/user/Navbar";
 import { AnimatedImages } from "../../components/user/AnimatedImages";
 import { ButtonOutline, ButtonSolid } from "../../components/common/Button";
-import { serviceButtons } from "../../data";
+import { offers, serviceButtons } from "../../data";
 import Loading from "../../components/common/Loading";
+import CardCarousel from "../../components/user/Carousel";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -102,20 +103,24 @@ const Home = () => {
           </div>
           <div className="h-screen">
             <div>
-              <div className="h-40 flex items-center justify-between px-20">
-                <h2 className="text-4xl font-bold">Top offers live now</h2>
+              <div className="h-40 flex items-center justify-between md:px-20 px-2">
+                <h2 className="md:text-4xl text-2xl font-bold">
+                  Top offers live now
+                </h2>
                 <div>
                   <ButtonOutline
                     title={"See more"}
                     className={
-                      "px-6 py-3 md:py-2 rounded-2xl hover:bg-cyan-500 hover:text-white"
+                      "md:px-6 px-3 py-2 md:py-3 rounded-2xl hover:bg-cyan-500 text-sm md:text-base hover:text-white"
                     }
                   >
                     See more
                   </ButtonOutline>
                 </div>
               </div>
-              <div>{/* <CarouselCard /> */}</div>
+              <div>
+                <CardCarousel offerCards={offers} />
+              </div>
             </div>
           </div>
         </>
