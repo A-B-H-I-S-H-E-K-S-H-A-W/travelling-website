@@ -13,11 +13,11 @@ const Navbar = () => {
         <div className="space-x-2">
           <ButtonOutline
             title={"Register"}
-            className={"px-3 py-1 md:py-2 rounded-md"}
+            className={"md:px-3 px-2 py-1 md:py-2 rounded-md"}
           />
           <ButtonSolid
             title={"Login"}
-            className={"px-3 py-1 md:py-2 rounded-md"}
+            className={"md:px-3 px-2 py-1 md:py-2 rounded-md"}
           />
         </div>
       </div>
