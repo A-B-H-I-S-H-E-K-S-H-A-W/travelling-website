@@ -5,6 +5,7 @@ import { ButtonSolid } from "../../components/common/Button";
 import { serviceButtons } from "../../data";
 import Loading from "../../components/common/Loading";
 import Cards from "../../components/user/Cards";
+import { offers } from "../../data";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -101,7 +102,16 @@ const Home = () => {
               </div>
             </main>
           </div>
-          <Cards />
+          <Cards
+            CardTitle={"Top offers live now"}
+            CardBtn={"See more"}
+            offers={offers}
+          />
+          <Cards
+            CardTitle={"Top offers live now"}
+            CardBtn={"See more"}
+            offers={offers}
+          />
         </>
       )}
     </>
