@@ -6,6 +6,7 @@ import { serviceButtons } from "../../data";
 import Loading from "../../components/common/Loading";
 import Cards from "../../components/user/Cards";
 import { offers } from "../../data";
+import Footer from "../../components/user/Footer";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -112,6 +113,12 @@ const Home = () => {
             CardBtn={"More hotels"}
             offers={offers}
           />
+          <Cards
+            CardTitle={"Choose perfect destination."}
+            CardBtn={"Search Places"}
+            offers={offers}
+          />
+          <Footer />
         </>
       )}
     </>
