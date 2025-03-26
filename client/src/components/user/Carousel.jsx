@@ -10,7 +10,7 @@ const CardCarousel = ({ offerCards }) => {
   // Get visible cards count based on screen size
   const getVisibleCards = () => {
     if (typeof window !== "undefined") {
-      return window.innerWidth >= 768 ? 3.4 : 1.5;
+      return window.innerWidth >= 768 ? 3.3 : 1.8;
     }
     return 4; // Default to desktop view
   };
@@ -88,10 +88,10 @@ const CardCarousel = ({ offerCards }) => {
           {offerCards.map((card) => (
             <div
               key={card.id}
-              className="shrink-0 relative z-0 px- w-full md:w-1/4 sm:w-2/5"
+              className="shrink-0 relative z-0 px- w-full "
               style={{ width: `${100 / visibleCards}%` }}
             >
-              <div className="h-[22rem] bg-white rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg">
+              <div className="md:h-[22rem] sm:h-[18rem] h-[16rem] bg-white rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg">
                 <img
                   className="w-full h-full rounded-lg"
                   src={card.src}
