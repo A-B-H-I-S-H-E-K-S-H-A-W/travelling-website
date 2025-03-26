@@ -8,7 +8,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-20 bg-sky-950 pt-8">
+    <footer className="mt-0 bg-sky-950 pt-8">
       <div className="w-full px-20 mx-auto">
         <div className="grid md:grid-cols-2 gap-20 p-4">
           <div className="">
