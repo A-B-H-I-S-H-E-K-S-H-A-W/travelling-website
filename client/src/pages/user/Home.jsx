@@ -108,8 +108,8 @@ const Home = () => {
             offers={offers}
           />
           <Cards
-            CardTitle={"Top offers live now"}
-            CardBtn={"See more"}
+            CardTitle={"Top hotels to choose from"}
+            CardBtn={"More hotels"}
             offers={offers}
           />
         </>
