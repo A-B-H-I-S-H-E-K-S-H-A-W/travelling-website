@@ -4,7 +4,7 @@ import Layout from "../../Layout";
 export default function Login() {
   return (
     <>
-      <Layout>
+      <Layout showFooter={false}>
         <div
           className="w-screen min-h-screen overflow-hidden"
           style={{
