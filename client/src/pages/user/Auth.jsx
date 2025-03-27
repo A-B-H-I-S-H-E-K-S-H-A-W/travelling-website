@@ -1,7 +1,7 @@
 import loginBg from "../../assets/images/login.jpg";
 import Layout from "../../Layout";
 
-export default function Login() {
+export default function Auth() {
   return (
     <>
       <Layout showFooter={false}>
