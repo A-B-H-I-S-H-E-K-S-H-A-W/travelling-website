@@ -9,8 +9,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/auth/v1/login" element={<Auth />} />
-          <Route path="/auth/v1/register" element={<Auth />} />
+          <Route
+            path="/auth/v1/login"
+            element={<Auth isLoginSection={true} />}
+          />
+          <Route
+            path="/auth/v1/register"
+            element={<Auth isLoginSection={false} />}
+          />
         </Routes>
       </BrowserRouter>
     </>
