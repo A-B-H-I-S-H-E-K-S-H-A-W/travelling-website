@@ -77,21 +77,19 @@ const Home = () => {
                         <div className="mt-5 h-20">
                           <div className="grid grid-cols-3 w-full gap-3 md:gap-5 rounded-2xl">
                             {serviceButtons.map((item) => (
-                              <>
-                                <div
-                                  key={item.id}
-                                  className={`md:h-24 h-16 w-full hover:scale-110 duration-300 cursor-pointer ${item.className}`}
-                                >
-                                  <img
-                                    className={item.imageClassName}
-                                    src={item.src}
-                                    alt={item.alt}
-                                  />
-                                  <p className="font-semibold text-center mt-1 text-sm md:text-lg italic">
-                                    {item.title}
-                                  </p>
-                                </div>
-                              </>
+                              <div
+                                key={item.id}
+                                className={`md:h-24 h-16 w-full hover:scale-110 duration-300 cursor-pointer ${item.className}`}
+                              >
+                                <img
+                                  className={item.imageClassName}
+                                  src={item.src}
+                                  alt={item.alt}
+                                />
+                                <p className="font-semibold text-center mt-1 text-sm md:text-lg italic">
+                                  {item.title}
+                                </p>
+                              </div>
                             ))}
                           </div>
                         </div>
