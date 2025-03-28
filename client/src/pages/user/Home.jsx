@@ -28,7 +28,7 @@ const Home = () => {
         <>
           <Layout>
             <div className="min-h-screen py-10 bg-radial-[at_90%_90%] from-sky-400 to-white to-90%">
-              <main className="md:pt-10 pt-14 md:px-20 px-3">
+              <main className="md:pt-10 pt-14 md:px-20">
                 <div className="grid md:grid-cols-2 md:space-x-5">
                   <div className="mt-16">
                     <div>
