@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/user/Home";
 import Auth from "./pages/user/Auth";
 import Search from "./pages/user/Search";
+import InfoPage from "./pages/user/InfoPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             element={<Auth isLoginSection={false} />}
           />
           <Route path="/search" element={<Search />} />
+          <Route path="/info" element={<InfoPage />} />
         </Routes>
       </BrowserRouter>
     </>
