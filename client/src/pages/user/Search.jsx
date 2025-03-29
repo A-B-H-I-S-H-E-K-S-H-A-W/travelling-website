@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../Layout";
 import loginBg from "../../assets/images/search.jpg";
 import { ButtonOutline, ButtonSolid } from "../../components/common/Button";
+import CardItems from "../../components/user/CardItems";
 
 const Search = () => {
   return (
@@ -61,6 +62,10 @@ const Search = () => {
                   title={"View all"}
                   className={"md:px-3 px-2 py-1 md:py-2 rounded-md"}
                 />
+              </div>
+
+              <div className="mt-4">
+                <CardItems />
               </div>
             </div>
           </div>
