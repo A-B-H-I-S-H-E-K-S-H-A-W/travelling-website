@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../../components/user/Navbar";
 import { AnimatedImages } from "../../components/user/AnimatedImages";
 import { ButtonSolid } from "../../components/common/Button";
 import { serviceButtons } from "../../data";
 import Loading from "../../components/common/Loading";
 import Cards from "../../components/user/Cards";
 import { offers } from "../../data";
-import Footer from "../../components/user/Footer";
 import Layout from "../../Layout";
 
 const Home = () => {
