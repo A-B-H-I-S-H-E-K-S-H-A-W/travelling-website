@@ -9,13 +9,13 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="mt-0 bg-sky-950 pt-8">
-      <div className="w-full px-20 mx-auto">
+      <div className="w-full md:px-20 mx-auto">
         <div className="grid md:grid-cols-2 gap-20 p-4">
           <div className="">
             <h1 className="text-cyan-600 text-5xl font-bold ">WanderSphere</h1>
           </div>
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 p-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-4">
           <div className="mt-8">
             <h4 className="text-white font-bold text-xl md:text-2xl">
               Contact Us
@@ -42,55 +42,11 @@ const Footer = () => {
           </div>
 
           <div className="mt-8">
-            <h4 className="text-white font-bold text-xl md:text-2xl">
-              Category
-            </h4>
-            <ul className="text-white text-lg flex flex-col gap-3 my-3">
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Graphic Design</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Digital Marketing</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Writing & Translate</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Video Animation</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Music & Audio</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Developing & IT</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Programming</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-8">
             <h4 className="text-white font-bold text-xl md:text-2xl">About</h4>
             <ul className="text-white text-lg flex flex-col gap-3 my-3">
               <li className="flex items-center gap-2">
                 <i class="fa-solid fa-arrow-right"></i>
                 <a href="">About Us</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Press & News</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Pricing Plan</a>
               </li>
               <li className="flex items-center gap-2">
                 <i class="fa-solid fa-arrow-right"></i>
@@ -126,14 +82,6 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Getting of SelfLancer</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Buying on SelfLancer</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
                 <a href="">Work zones Guide</a>
               </li>
               <li className="flex items-center gap-2">
@@ -148,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-sky-900 h-20 flex items-center justify-between px-20 gap-3">
+      <div className="bg-sky-900 h-20 flex items-center justify-between px-4 md:px-20 gap-3">
         <div>
           <h5 className="text-white text-sm md:text-base font-bold">
             Copyright © 2024 WanderSphere All Rights Reserved.
