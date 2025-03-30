@@ -59,7 +59,7 @@ const HotelForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -77,7 +77,7 @@ const HotelForm = () => {
             value={formData.address}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -95,7 +95,7 @@ const HotelForm = () => {
             name="landmark"
             value={formData.landmark.join(",")}
             onChange={handleChange}
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -114,7 +114,7 @@ const HotelForm = () => {
             value={formData.city}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -133,7 +133,7 @@ const HotelForm = () => {
             value={formData.state}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -152,7 +152,7 @@ const HotelForm = () => {
             value={formData.country}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -171,7 +171,7 @@ const HotelForm = () => {
             value={formData.pincode}
             onChange={handleChange}
             required
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -203,7 +203,7 @@ const HotelForm = () => {
             name="facilities"
             value={formData.facilities.join(",")}
             onChange={handleChange}
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -223,7 +223,7 @@ const HotelForm = () => {
             onChange={handleChange}
             min="0"
             max="5"
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -241,7 +241,7 @@ const HotelForm = () => {
             name="photos"
             value={formData.photos}
             onChange={handleChange}
-            className="mt-1 block w-full p-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-2 border-4 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
