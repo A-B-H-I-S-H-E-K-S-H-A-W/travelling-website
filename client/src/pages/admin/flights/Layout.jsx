@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Settings, User, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen }) => {
   return (
@@ -9,13 +10,22 @@ const Sidebar = ({ isOpen }) => {
       } md:translate-x-0`}
     >
       <h2 className="text-xl font-semibold mb-8 tracking-wide">WanderSphere</h2>
-      <ul className="space-y-4">
-        <li className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer transition flex items-center gap-3">
-          📦 Create Item
-        </li>
-        <li className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer transition flex items-center gap-3">
-          📋 List Items
-        </li>
+      <ul className="flex flex-col space-y-4">
+        <Link to="/flight/admin/dashboard">
+          <li className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer transition flex items-center gap-3">
+            📦 Dashboard
+          </li>
+        </Link>
+        <Link to="/flight/admin/create">
+          <li className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer transition flex items-center gap-3">
+            📦 Create Item
+          </li>
+        </Link>
+        <Link>
+          <li className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 cursor-pointer transition flex items-center gap-3">
+            📋 List Items
+          </li>
+        </Link>
       </ul>
     </div>
   );
@@ -58,17 +68,15 @@ const TopBar = ({ toggleSidebar }) => {
   );
 };
 
-export default function Dashboard() {
+export default function FlightDashboardLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-100">
+    <div className="flex min-h-screen overflow-hidden bg-gray-100">
       <Sidebar isOpen={sidebarOpen} />
       <div className="flex-1 flex flex-col md:ml-64 transition-all">
         <TopBar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-        <div className="p-8 text-gray-800 text-lg">
-          Welcome to the Admin Dashboard
-        </div>
+        <div className="p-8 text-gray-800 text-lg">{children}</div>
       </div>
     </div>
   );

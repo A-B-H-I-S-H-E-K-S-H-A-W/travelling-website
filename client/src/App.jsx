@@ -4,9 +4,12 @@ import Home from "./pages/user/Home";
 import Auth from "./pages/user/Auth";
 import Search from "./pages/user/Search";
 import InfoPage from "./pages/user/InfoPage";
-import BusDashboard from "./pages/admin/bus/BusDashboard";
-import FlightDashboard from "./pages/admin/flights/FlightDashboard";
-import HotelDashboard from "./pages/admin/hotels/HotelDashboard";
+import BusDashboard from "./pages/admin/bus/Layout";
+import FlightDashboard from "./pages/admin/flights/Layout";
+import BusForm from "./pages/admin/bus/BusForm";
+import FlightForm from "./pages/admin/flights/FlightForm";
+import HotelForm from "./pages/admin/hotels/HotelForm";
+import HotelDashboard from "./pages/admin/hotels/Dashboard";
 
 function App() {
   return (
@@ -25,9 +28,15 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/info" element={<InfoPage />} />
           {/* Admin Dashboard */}
+          {/* BusDashboard */}
           <Route path="/bus/admin/dashboard" element={<BusDashboard />} />
+          <Route path="/bus/admin/create" element={<BusForm />} />
+          {/* FlightDashboard */}
           <Route path="/flight/admin/dashboard" element={<FlightDashboard />} />
+          <Route path="/flight/admin/create" element={<FlightForm />} />
+          {/* HotelDashboard */}
           <Route path="/hotel/admin/dashboard" element={<HotelDashboard />} />
+          <Route path="/hotel/admin/create" element={<HotelForm />} />
         </Routes>
       </BrowserRouter>
     </>
