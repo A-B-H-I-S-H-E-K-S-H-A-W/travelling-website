@@ -10,6 +10,7 @@ import BusForm from "./pages/admin/bus/BusForm";
 import FlightForm from "./pages/admin/flights/FlightForm";
 import HotelForm from "./pages/admin/hotels/HotelForm";
 import HotelDashboard from "./pages/admin/hotels/Dashboard";
+import AdminDashboard from "./pages/superadmin/Dashboard";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
           {/* HotelDashboard */}
           <Route path="/hotel/admin/dashboard" element={<HotelDashboard />} />
           <Route path="/hotel/admin/create" element={<HotelForm />} />
+          {/* SuperAdmin */}
+          <Route path="/super-admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </>
