@@ -1,8 +1,11 @@
 import app from "./app.js";
 import dotenv from "dotenv";
 import userRouter from "./routes/user.routes.js";
-
-dotenv.config();
+import mongodbConnection from "./db/db.js";
+dotenv.config({
+  path: "./env",
+});
+mongodbConnection();
 
 app.get("/", (req, res) => {
   res.send("Hello World");
