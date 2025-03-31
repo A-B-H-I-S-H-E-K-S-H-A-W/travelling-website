@@ -5,12 +5,13 @@ import mongodbConnection from "./db/db.js";
 dotenv.config({
   path: "./env",
 });
+
 mongodbConnection()
   .then(() => {
     app.on("Error", (error) => {
-      console.log("Error:: ", error);
-      throw error;
-    });
+        console.log("Error:: ", error);
+        throw error
+    })
     app.listen(process.env.PORT || 3000, () => {
       console.log(
         `Your server is running on http://localhost:${process.env.PORT || 3000}`
