@@ -1,6 +1,5 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-// Define User Schema
 const userSchema = new mongoose.Schema(
   {
     id: {
@@ -8,7 +7,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    name: {
+    username: {
       type: String,
       required: true,
       trim: true,
@@ -31,21 +30,23 @@ const userSchema = new mongoose.Schema(
     },
     profilePicture: {
       type: String,
-      default: "", // URL of the profile picture
+      required: true,
+      default: "",
     },
-    tripsDetails: {
-      type: String,
-      default: "", // Optional field
-    },
+    tripsDetails: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "OtherModel",
+      },
+    ],
     saved: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "OtherModel", // Refers to another collection (e.g., saved trips/items)
+      ref: "OtherModel",
     },
   },
   {
-    timestamps: true, // Automatically adds createdAt and updatedAt fields
+    timestamps: true,
   }
 );
 
-// Create and export the User model
 export const User = mongoose.model("User", userSchema);
