@@ -6,16 +6,16 @@ dotenv.config({
   path: "./env",
 });
 
+const port = process.env.PORT || 3000;
+
 mongodbConnection()
   .then(() => {
     app.on("Error", (error) => {
-        console.log("Error:: ", error);
-        throw error
-    })
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(
-        `Your server is running on http://localhost:${process.env.PORT || 3000}`
-      );
+      console.log("Error:: ", error);
+      throw error;
+    });
+    app.listen(port, () => {
+      console.log(`Your server is running on http://localhost:${port}`);
     });
   })
   .catch((error) => {
