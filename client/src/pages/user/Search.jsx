@@ -19,37 +19,54 @@ const Search = () => {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="pt-16 flex flex-col gap-3 px-3">
-                <div className="w-full flex items-center md:space-x-8 space-x-2 bg-white mt-4 rounded-2xl p-1">
-                  <input
-                    type="text"
-                    className="h-10 w-[85%] rounded-2xl px-2 ring ring-sky-500  text-gray-700"
-                    placeholder="Destination ?"
-                  />
-                  <ButtonSolid
-                    title={"Serach"}
-                    className={"px-9 py-2 md:py-2 rounded-2xl"}
-                  />
-                </div>
-                <div className="w-full h-24">
-                  <div className="grid md:grid-cols-6 grid-cols-3 text-center gap-1">
-                    <div className="h-24 w-full bg-white px-10 flex items-center justify-center rounded-2xl border shadow-2xl">
-                      Mumbai
+              <div className="pt-20 px-3">
+                <div className="w-full md:h-16 md:rounded-full rounded-xl md:max-w-5xl mx-auto bg-white">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-center">
+                    <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                      <pre>Choose Location</pre>
+                      <input
+                        type="text"
+                        className="border-4 rounded-xl w-full"
+                      />
                     </div>
-                    <div className="h-24 w-full bg-white flex items-center justify-center rounded-2xl">
-                      Kolkata
+                    <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                      <pre>Choose Destination</pre>
+                      <input
+                        type="text"
+                        className="border-4 rounded-xl w-full"
+                      />
                     </div>
-                    <div className="h-24 w-full bg-white flex items-center justify-center rounded-2xl">
-                      19 March
+                    <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                      <pre>Date of Stay</pre>
+                      <input
+                        type="date"
+                        className="border-4 rounded-xl w-full"
+                      />
                     </div>
-                    <div className="h-24 w-full bg-white flex items-center justify-center rounded-2xl">
-                      Traveller 1
+                    <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                      <pre>Add Guest</pre>
+                      <select
+                        name=""
+                        id=""
+                        className="border-4 rounded-xl w-full"
+                      >
+                        <option value="1">1 People</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="8">8 People</option>
+                        <option value="10">10 People</option>
+                      </select>
                     </div>
-                    <div className="h-24 w-full bg-white flex items-center justify-center rounded-2xl">
-                      Mumbai
-                    </div>
-                    <div className="h-24 w-full bg-white flex items-center justify-center rounded-2xl">
-                      Kolkata
+                    <div className="h-16 col-span-2 md:col-auto flex justify-center items-center">
+                      <ButtonSolid
+                        title={"Serach"}
+                        className={
+                          "md:px-18 sm:px-14 px-20 py-2 md:py-3 md:rounded-full rounded-xl"
+                        }
+                      />
                     </div>
                   </div>
                 </div>
