@@ -42,25 +42,51 @@ const Home = () => {
                         </p>
                       </div>
                       <div className="mt-6">
-                        <div className="w-full md:h-16 md:rounded-full rounded-xl bg-white">
-                          <div className="grid grid-cols-2 md:grid-cols-5 text-center px-2">
-                            <div className="h-16 w-full flex items-center justify-center">
-                              Mumbai
+                        <div className="w-full md:h-16 md:rounded-full rounded-xl md:max-w-5xl mx-auto bg-white">
+                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 text-center px-2 gap-2">
+                            <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                              <pre>Choose Location</pre>
+                              <input
+                                type="text"
+                                className="border-4 rounded-xl w-full"
+                              />
                             </div>
-                            <div className="h-16 w-full flex items-center justify-center">
-                              Kolkata
+                            <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                              <pre>Choose Destination</pre>
+                              <input
+                                type="text"
+                                className="border-4 rounded-xl w-full"
+                              />
                             </div>
-                            <div className="h-16 w-full flex items-center justify-center">
-                              19 March
+                            <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                              <pre>Date of Stay</pre>
+                              <input
+                                type="date"
+                                className="border-4 rounded-xl w-full"
+                              />
                             </div>
-                            <div className="h-16 w-full flex items-center justify-center">
-                              Traveller 1
+                            <div className="h-16 w-full flex flex-col items-start justify-center px-5">
+                              <pre>Add Guest</pre>
+                              <select
+                                name=""
+                                id=""
+                                className="border-4 rounded-xl w-full"
+                              >
+                                <option value="1">1 People</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="8">8 People</option>
+                                <option value="10">10 People</option>
+                              </select>
                             </div>
-                            <div className="h-16 w-full flex items-center justify-center">
+                            <div className="h-16 col-span-2 md:col-auto flex justify-center items-center">
                               <ButtonSolid
                                 title={"Serach"}
                                 className={
-                                  "md:px-18 px-3 py-2 md:py-3 md:rounded-full rounded-xl w-full"
+                                  "md:px-16 sm:px-14 px-20 py-2 md:py-3 md:rounded-full rounded-xl"
                                 }
                               />
                             </div>
