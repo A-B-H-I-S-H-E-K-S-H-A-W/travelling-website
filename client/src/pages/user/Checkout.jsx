@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../Layout";
 import Input from "../../components/common/Input";
 import { ButtonSolid } from "../../components/common/Button";
+import Table from "../../components/common/Table";
 
 const Checkout = () => {
   const months = [
@@ -29,7 +30,9 @@ const Checkout = () => {
     <Layout>
       <div className="px-20 py-28 h-screen">
         <div className="grid md:grid-cols-[70%_30%]">
-          <div className="">Hello</div>
+          <div className="">
+            <Table />
+          </div>
           <div className="p-4 ring rounded-xl">
             <div>
               <div>
