@@ -22,11 +22,11 @@ const Footer = () => {
             </h4>
             <ul className="text-white text-lg my-4 flex flex-col gap-5">
               <li>
-                <i class="fa-solid fa-envelope"></i> Email:
+                <i className="fa-solid fa-envelope"></i> Email:
                 example.mail@gmail.com
               </li>
               <li>
-                <i class="fa-solid fa-phone"></i> Mobile: +1 1234567890
+                <i className="fa-solid fa-phone"></i> Mobile: +1 1234567890
               </li>
               <li>
                 <p>Address:</p>
@@ -35,34 +35,30 @@ const Footer = () => {
             <h4 className="text-white font-bold text-xl md:text-2xl mt-6">
               Download App
             </h4>
-            <div className="flex gap-3 mt-10">
-              <img src={""} alt="" />
-              <img src={""} alt="" />
-            </div>
           </div>
 
           <div className="mt-8">
             <h4 className="text-white font-bold text-xl md:text-2xl">About</h4>
             <ul className="text-white text-lg flex flex-col gap-3 my-3">
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">About Us</a>
+                <i className="fa-solid fa-arrow-right"></i>
+                <a href="#">About Us</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Privacy Policy</a>
+                <i className="fa-solid fa-arrow-right"></i>
+                <a href="#">Privacy Policy</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Terms & Services</a>
+                <i className="fa-solid fa-arrow-right"></i>
+                <a href="#">Terms & Services</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">FAQ's</a>
+                <i className="fa-solid fa-arrow-right"></i>
+                <a href="#">FAQ's</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Blog's</a>
+                <i className="fa-solid fa-arrow-right"></i>
+                <a href="#">Blog's</a>
               </li>
             </ul>
           </div>
@@ -73,24 +69,19 @@ const Footer = () => {
             </h4>
             <ul className="text-white text-lg flex flex-col gap-3 my-3">
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Help & Support</a>
+                <a href="#">Help & Support</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Trust & Security</a>
+                <a href="#">Trust & Security</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Work zones Guide</a>
+                <a href="#">Work zones Guide</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">WorkSpace</a>
+                <a href="#">WorkSpace</a>
               </li>
               <li className="flex items-center gap-2">
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="">Reviews</a>
+                <a href="#">Reviews</a>
               </li>
             </ul>
           </div>
@@ -103,16 +94,16 @@ const Footer = () => {
           </h5>
         </div>
         <div className="flex gap-4 ">
-          <a href="">
+          <a href="#">
             <TwitterIcon className="text-white" />
           </a>
-          <a href="">
+          <a href="#">
             <FacebookIcon className="text-white" />
           </a>
-          <a href="">
+          <a href="#">
             <Instagram className="text-white" />
           </a>
-          <a href="">
+          <a href="#">
             <YoutubeIcon className="text-white" />
           </a>
         </div>
