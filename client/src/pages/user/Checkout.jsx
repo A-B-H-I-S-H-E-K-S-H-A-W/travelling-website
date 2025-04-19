@@ -26,14 +26,22 @@ const Checkout = () => {
   for (let year = 1995; year <= 2025; year++) {
     years.push(year);
   }
+
+  const rowData = [
+    { name: "John Doe", email: "john.doe@example.com", role: "Admin" },
+    { name: "Jane Smith", email: "jane.smith@example.com", role: "Editor" },
+    { name: "Mark Taylor", email: "mark.taylor@example.com", role: "Viewer" },
+  ];
+
+  const columnDefs = ["Name", "Email", "Role"];
   return (
     <Layout>
       <div className="px-20 py-28 h-screen">
-        <div className="grid md:grid-cols-[70%_30%]">
+        <div className="grid md:grid-cols-[69%_29%] gap-[2%]">
           <div className="">
-            <Table />
+            <Table columnDefs={columnDefs} rowData={rowData} />
           </div>
-          <div className="p-4 ring rounded-xl">
+          <div className="p-4 ring rounded-xl shadow-2xl">
             <div>
               <div>
                 <h3 className="text-3xl font-bold">Payment Method</h3>
@@ -81,7 +89,7 @@ const Checkout = () => {
                   <div className="mt-8">
                     <ButtonSolid
                       title={"Continue"}
-                      className={"px-[9.5rem] py-2 rounded-md"}
+                      className={"px-[9.1rem] py-2 rounded-md"}
                     >
                       Continue
                     </ButtonSolid>
