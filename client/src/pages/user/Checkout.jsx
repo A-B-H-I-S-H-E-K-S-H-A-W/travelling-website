@@ -53,16 +53,20 @@ const Checkout = () => {
                     <div>
                       <label className="font-medium">Expires</label>
                       <select className="w-full border py-1.5 rounded-md">
-                        {months.map((item) => (
-                          <option value={item}>{item}</option>
+                        {months.map((item, i) => (
+                          <option key={i} value={item}>
+                            {item}
+                          </option>
                         ))}
                       </select>
                     </div>
                     <div>
                       <label className="font-medium">Year</label>
                       <select className="w-full border py-1.5 rounded-md">
-                        {years.map((year) => (
-                          <option value={year}>{year}</option>
+                        {years.map((year, i) => (
+                          <option key={i} value={year}>
+                            {year}
+                          </option>
                         ))}
                       </select>
                     </div>
