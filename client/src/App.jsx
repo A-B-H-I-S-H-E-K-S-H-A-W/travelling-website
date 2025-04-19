@@ -11,6 +11,7 @@ import FlightForm from "./pages/admin/flights/FlightForm";
 import HotelForm from "./pages/admin/hotels/HotelForm";
 import HotelDashboard from "./pages/admin/hotels/Dashboard";
 import AdminDashboard from "./pages/superadmin/Dashboard";
+import Checkout from "./pages/user/Checkout";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           />
           <Route path="/search" element={<Search />} />
           <Route path="/info" element={<InfoPage />} />
+          <Route path="/checkout" element={<Checkout />} />
           {/* Admin Dashboard */}
           {/* BusDashboard */}
           <Route path="/bus/admin/dashboard" element={<BusDashboard />} />
